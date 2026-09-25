@@ -651,3 +651,217 @@ h2 { margin-bottom: 23px; font-size: clamp(38px, 4.4vw, 61px); }
     transform-origin: bottom right;
   }
 }
+
+
+/* Контактный телефон */
+.header-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-contact span {
+  margin-left: 0;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-phone {
+  margin-top: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.hero-phone:hover {
+  color: var(--accent);
+}
+
+.hero-phone-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hero-phone strong {
+  color: var(--accent);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-contact p {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.footer-contact a {
+  width: fit-content;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.footer-request-link {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mobile-contact-bar {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding-bottom: 78px;
+  }
+
+  .header-contact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1px;
+    font-size: 11px;
+  }
+
+  .header-contact span {
+    font-size: 8px;
+  }
+
+  .hero-phone {
+    display: none;
+  }
+
+  .site-footer {
+    padding-bottom: 36px;
+  }
+
+  .mobile-contact-bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    min-height: 68px;
+    padding: 8px 16px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 8px;
+    border-top: 1px solid #3b464e;
+    background: rgba(13, 16, 19, 0.97);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-contact-bar a {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .mobile-contact-bar a strong {
+    margin-top: 2px;
+    color: var(--accent);
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .mobile-contact-bar .mobile-request-button {
+    align-items: center;
+    color: #14181b;
+    background: var(--accent);
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+/* WhatsApp: временно отключён до подключения номера */
+.button-whatsapp {
+  border-color: #4e5a62;
+  color: #e8ecef;
+}
+
+.button-whatsapp.is-disabled,
+.mobile-whatsapp-button.is-disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+/* Нижняя панель связи на телефоне */
+@media (max-width: 560px) {
+  body {
+    padding-bottom: 78px;
+  }
+
+  .mobile-contact-bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    min-height: 68px;
+    padding: 8px 12px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 0.65fr;
+    gap: 7px;
+    border-top: 1px solid #3b464e;
+    background: rgba(13, 16, 19, 0.97);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-contact-bar a {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .mobile-call-button {
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding-left: 4px;
+  }
+
+  .mobile-call-button strong {
+    margin-top: 2px;
+    color: var(--accent);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .mobile-whatsapp-button {
+    border: 1px solid #3f4b53;
+  }
+
+  .mobile-request-button {
+    color: #14181b !important;
+    background: var(--accent);
+  }
+}
+
+.gallery-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

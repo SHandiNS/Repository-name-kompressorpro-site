@@ -84,7 +84,7 @@ form?.addEventListener('submit', async (event) => {
 
     success.innerHTML = `
       <strong>Не удалось отправить заявку.</strong>
-      Пожалуйста, попробуйте ещё раз позже или свяжитесь с нами по телефону.
+      Пожалуйста, попробуйте ещё раз позже или позвоните нам: +7 995 904-10-08.
     `;
     success.hidden = false;
     success.scrollIntoView({ behavior: 'smooth', block: 'center' });
