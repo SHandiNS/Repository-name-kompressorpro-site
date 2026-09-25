@@ -806,3 +806,11 @@ h2 { margin-bottom: 23px; font-size: clamp(38px, 4.4vw, 61px); }
   max-width: 100%;
   background: #0b0f12;
 }
+
+.gallery-slide iframe {
+  display: none;
+}
+.gallery-slide img {
+  display: block;
+  max-width: 100%;
+}
